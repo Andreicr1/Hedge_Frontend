@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 function PnLSimulationForm() {
   const [input, setInput] = useState("");
   const [response, setResponse] = useState("");
@@ -8,9 +10,12 @@ function PnLSimulationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post("http://127.0.0.1:8000/pnl/simulate", {
-        data: input,
-      });
+      const result = await axios.post(
+        `${API_BASE_URL}/pnl/simulate`,
+        {
+          data: input,
+        }
+      );
       setResponse(result.data);
     } catch (error) {
       console.error("Erro ao enviar simulação:", error);
