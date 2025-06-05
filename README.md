@@ -8,16 +8,15 @@ This repository contains the React-based frontend for the Hedge System. It provi
 
 ## Installation
 
-The main application lives inside the `hedge-system-frontend` directory. From the repository root run:
+Install the dependencies at the repository root:
 
 ```bash
-cd hedge-system-frontend
 npm install
 ```
 
 ## Running the application
 
-Inside the `hedge-system-frontend` directory run:
+Start the development server with:
 
 ```bash
 npm start
@@ -27,7 +26,7 @@ This starts the development server at [http://localhost:3000](http://localhost:3
 
 ## Running tests
 
-While still inside `hedge-system-frontend`, execute:
+Run the tests with:
 
 ```bash
 npm test
